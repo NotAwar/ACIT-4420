@@ -1,6 +1,4 @@
-def find_prime_factors(n, prime_factors=None):
-    if prime_factors is None:
-        prime_factors = []
+def find_prime_factors(n, prime_factors=[]):
         
     # Handle the factor 2 first to skip even numbers later
     while n % 2 == 0:
@@ -18,6 +16,9 @@ def find_prime_factors(n, prime_factors=None):
         prime_factors.append(n)
     return prime_factors
 
-# Call the function and print the output to test
-result = find_prime_factors(197)
+# Call the function and print the output to test the results
+result = find_prime_factors(1)
+result2 = find_prime_factors(2)
+
 print(result)
+print(result2)
