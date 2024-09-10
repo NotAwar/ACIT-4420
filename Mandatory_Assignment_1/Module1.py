@@ -1,7 +1,13 @@
 def find_prime_factors(n, prime_factors=None):
-    i = 3
     if prime_factors is None:
         prime_factors = []
+        
+    # Handle the factor 2 first to skip even numbers later
+    while n % 2 == 0:
+        prime_factors.append(2)
+        n //= 2
+    i = 3
+   
     while i * i <= n:
         if n % i == 0:
             prime_factors.append(i)
