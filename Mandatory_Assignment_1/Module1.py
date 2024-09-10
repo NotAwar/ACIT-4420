@@ -1,4 +1,6 @@
-def find_prime_factors(n, prime_factors=[]):
+def find_prime_factors(n, prime_factors=None):
+    if prime_factors is None:
+        prime_factors = []
         
     # Handle the factor 2 first to skip even numbers later
     while n % 2 == 0:
@@ -17,8 +19,8 @@ def find_prime_factors(n, prime_factors=[]):
     return prime_factors
 
 # Call the function and print the output to test the results
-result = find_prime_factors(1)
-result2 = find_prime_factors(2)
-
-print(result)
-print(result2)
+print(find_prime_factors(56))   # Output: [2, 2, 2, 7]
+print(find_prime_factors(97))   # Output: [97] (prime number)
+print(find_prime_factors(100))  # Output: [2, 2, 5, 5]
+print(find_prime_factors(1))    # Output: [] (no prime factors for 1)
+print(find_prime_factors(2))    # Output: [2]
