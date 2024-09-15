@@ -156,3 +156,26 @@ if __name__ == "__main__":
 # │ create-account                    Create a new account based on type: savings or checking.                                                                     │
 # │ deposit                           Deposit an amount into the account.                                                                                          │
 # │ withdraw                          Withdraw an amount from the account.   
+
+"""
+# Example Commands:
+
+# 1. Create Accounts
+python banking_system.py create-account savings "John Doe" --interest-rate 0.03
+python banking_system.py create-account checking "Jane Smith" --transaction-fee 2
+
+# 2. Deposit Money
+python banking_system.py deposit "John Doe" 1000
+python banking_system.py deposit "Jane Smith" 500
+
+# 3. Withdraw Money
+python banking_system.py withdraw "John Doe" 200
+python banking_system.py withdraw "Jane Smith" 100
+
+# 4. Apply Interest
+python banking_system.py apply-interest "John Doe"
+
+# 5. Check Account Info
+python banking_system.py account-info "John Doe"
+python banking_system.py account-info "Jane Smith"
+"""
