@@ -1,2 +1,0 @@
-[console_scripts]
-morning_greetings = main:app
