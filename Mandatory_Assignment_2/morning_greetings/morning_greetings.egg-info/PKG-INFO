@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: morning_greetings
+Version: 1.0
+Summary: A package to automate sending personalized morning messages.
+Author: Awar Abdulkarim
+Requires-Dist: typer
+Requires-Dist: schedule
