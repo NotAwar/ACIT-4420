@@ -1,6 +1,6 @@
 import typer
 import pandas as pd
-
+from typing import Tuple
 def display_relatives_table(relatives: pd.DataFrame):
     """Display relatives' data in a formatted table."""
     from tabulate import tabulate
@@ -30,7 +30,7 @@ def get_user_criteria() -> str:
         criterion = "time"
     return criterion
 
-def get_start_and_target() -> (str, str):
+def get_start_and_target() -> Tuple[str, str]:
     """Prompt the user to enter the starting and target locations."""
     start = typer.prompt("Enter the starting location (e.g., Relative_1)")
     target = typer.prompt("Enter the target location (e.g., Relative_10)")
