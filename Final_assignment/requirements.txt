@@ -1,1 +1,4 @@
-empty
+geopy==2.2.0
+networkx==2.6.3
+matplotlib==3.4.3
+pytest==6.2.5
