@@ -39,8 +39,8 @@ def compute_route(criterion: str = typer.Option("distance", "--criterion", "-c",
         # Solve TSP
         start_time = time.time()
         try:
-            tsp_path, total_weight, total_distance, total_cost, total_time = compute_tsp(G, criterion)
-            logging.info(f"Computed TSP path: {tsp_path} with total {criterion}: {total_weight}")
+            tsp_path, total_distance, total_cost, total_time = compute_tsp(G, criterion)
+            logging.info(f"Computed TSP path: {tsp_path} with total {criterion}: {total_distance}")
         except Exception as e:
             logging.error(f"Error in compute_tsp: {e}")
             raise
@@ -80,7 +80,7 @@ def interactive_session():
 
         start_time = time.time()
         try:
-            tsp_path, total_weight, total_distance, total_cost, total_time = compute_tsp(G, criterion)
+            tsp_path, total_distance, total_cost, total_time = compute_tsp(G, criterion)
             plot_graph(G, tsp_path, criterion)
             if criterion == "time":
                 unit = "minutes"

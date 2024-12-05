@@ -1,6 +1,7 @@
 import typer
 import pandas as pd
 from typing import Tuple
+
 def display_relatives_table(relatives: pd.DataFrame):
     """Display relatives' data in a formatted table."""
     from tabulate import tabulate
